@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title><%= title %></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="./css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<%- include('../partials/head', {title: title}); %>
+		<div class="movieApp full-width">
+			<% for(listing of info) { %>
+				<div class="movieListing">
+					<img src=<%= listing.image %> width=200>
+					<div class="movieText">
+						<h3><%= listing.title %></h3>
+						<p><%= listing.description %></p>
+					</div>
+				</div><br>
+			<% } %>
+		</div>
+		<%- include('../partials/footer'); %>
+	</body>
+</html>
